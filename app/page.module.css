@@ -1,0 +1,668 @@
+.main {
+  min-height: 100vh;
+}
+
+/* ======================== HERO ======================== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroGlow1 {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 225, 103, 0.07) 0%, transparent 70%);
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.heroGlow2 {
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(226, 92, 41, 0.05) 0%, transparent 70%);
+  animation: float 10s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(25px, -18px); }
+}
+
+.badge {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  margin-bottom: 40px;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(52px, 9vw, 100px);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.highlight {
+  color: var(--yellow);
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--yellow);
+  opacity: 0.25;
+  border-radius: 3px;
+}
+
+.heroSub {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--grey-text);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.heroNote {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.25);
+  max-width: 440px;
+  line-height: 1.6;
+}
+
+/* ======================== SHARED ======================== */
+.gradientBar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--yellow), var(--orange), var(--peach));
+  border-radius: 2px;
+  margin: 60px auto;
+  max-width: 1100px;
+}
+
+.section {
+  padding: 20px 24px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 40px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.yellow { color: var(--yellow); }
+
+/* ======================== COLOURS ======================== */
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.colorCard {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--dark-card);
+  transition: transform 0.3s ease;
+}
+
+.colorCard:hover {
+  transform: translateY(-3px);
+}
+
+.colorSwatch {
+  height: 100px;
+  width: 100%;
+}
+
+.colorInfo {
+  padding: 14px 16px;
+}
+
+.colorName {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.colorHex {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--grey-text);
+}
+
+.gradientLabel {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--yellow);
+  background: rgba(244, 225, 103, 0.08);
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.gradientRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.gradientSwatch {
+  height: 56px;
+  flex: 1;
+  min-width: 180px;
+  border-radius: 12px;
+}
+
+/* ======================== TYPOGRAPHY ======================== */
+.typeStack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.typeBlock {
+  padding: 36px;
+  background: var(--dark-card);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.typeBlockLabel {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  opacity: 0.5;
+}
+
+.fontTag {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--yellow);
+  background: rgba(244, 225, 103, 0.08);
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.typeDisplay {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.typeSub {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.typeSmall {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.typeBodyLg {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+.typeBody {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 600px;
+}
+
+.typeCaption {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  margin-top: 20px;
+  opacity: 0.6;
+}
+
+/* ======================== BUTTONS ======================== */
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  padding: 14px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.btnPrimary:hover {
+  background: #e6d35e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(244, 225, 103, 0.2);
+}
+
+.btnOrange {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.btnOrange:hover {
+  background: #cc5124;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(226, 92, 41, 0.2);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.btnSecondary:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btnGhost {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--peach);
+  border: 1.5px solid rgba(237, 171, 138, 0.25);
+}
+
+.btnGhost:hover {
+  background: rgba(237, 171, 138, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ======================== NAVIGATION ======================== */
+.navPreview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 36px;
+  background: rgba(17, 17, 17, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+}
+
+.navLogo {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.3px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navLinks li a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease;
+}
+
+.navLinks li a:hover {
+  color: var(--white);
+}
+
+.navCta {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  background: var(--yellow);
+  color: var(--black);
+  transition: all 0.3s ease;
+}
+
+.navCta:hover {
+  box-shadow: 0 4px 16px rgba(244, 225, 103, 0.2);
+}
+
+/* ======================== CARDS ======================== */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--dark-card);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.cardImage {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImagePlaceholder {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.cardBody {
+  padding: 26px;
+}
+
+.cardTag {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.cardText {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ======================== FOUNDERS ======================== */
+.founderGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.founderCard {
+  text-align: center;
+  padding: 40px 24px;
+  background: var(--dark-card);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.founderCard:hover {
+  transform: translateY(-3px);
+}
+
+.founderAvatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 26px;
+  color: var(--black);
+}
+
+.founderName {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.founderRole {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--grey-text);
+}
+
+/* ======================== QUOTE ======================== */
+.quoteBlock {
+  padding: 44px;
+  background: var(--dark-card);
+  border-radius: 16px;
+  border-left: 4px solid var(--yellow);
+}
+
+.quoteText {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 14px;
+}
+
+.quoteText em {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.quoteAttr {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--grey-text);
+}
+
+/* ======================== GET INVOLVED ======================== */
+.involvedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.involvedCard {
+  padding: 32px;
+  background: var(--dark-card);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.involvedCard:hover {
+  transform: translateY(-3px);
+}
+
+.involvedIcon {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.involvedTitle {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.involvedText {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ======================== FOOTER ======================== */
+.footerPreview {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 44px 40px;
+  background: var(--black);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.footerLogo {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.footerTagline {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--grey-text);
+}
+
+.footerRight {
+  text-align: right;
+}
+
+.footerEmail {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--peach);
+  transition: color 0.2s ease;
+}
+
+.footerEmail:hover {
+  color: var(--yellow);
+}
+
+.footerCopy {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+  margin-top: 4px;
+}
+
+/* ======================== RESPONSIVE ======================== */
+@media (max-width: 768px) {
+  .navPreview {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .founderGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerPreview {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footerRight {
+    text-align: left;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quoteBlock {
+    padding: 28px;
+  }
+
+  .quoteText {
+    font-size: 20px;
+  }
+}
