@@ -33,19 +33,19 @@ export default function Home() {
             { name: 'Primary Yellow', hex: '#F4E167', bg: '#F4E167' },
             { name: 'Accent Orange', hex: '#E25C29', bg: '#E25C29' },
             { name: 'Accent Peach', hex: '#EDAB8A', bg: '#EDAB8A' },
-            { name: 'Dark Background', hex: '#111111', bg: '#111111', border: true },
-            { name: 'White', hex: '#FFFFFF', bg: '#FFFFFF', dark: true },
+            { name: 'Dark Background', hex: '#111111', bg: '#111111' },
+            { name: 'White', hex: '#FFFFFF', bg: '#FFFFFF', border: true },
           ].map((c) => (
             <div className={styles.colorCard} key={c.hex}>
               <div
                 className={styles.colorSwatch}
                 style={{
                   background: c.bg,
-                  border: c.border ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                  border: c.border ? '1px solid rgba(0,0,0,0.1)' : 'none',
                 }}
               />
               <div className={styles.colorInfo}>
-                <div className={styles.colorName} style={c.dark ? { color: '#111' } : {}}>
+                <div className={styles.colorName}>
                   {c.name}
                 </div>
                 <div className={styles.colorHex}>{c.hex}</div>
