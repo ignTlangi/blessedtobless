@@ -3,9 +3,44 @@
 All notable changes to this project will be documented in this file.
 Format follows [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`
 
-- **MAJOR** — full site launches, major redesigns
-- **MINOR** — new sections, features, layout changes
-- **PATCH** — bug fixes, copy tweaks, small style adjustments
+---
+
+## [0.3.0] — 2026-04-15
+
+### Added — Full Site Build
+- Complete single-page scrolling site replacing the design system preview
+- **Sticky navigation** with frosted glass effect, section links, and CTA button
+- **Hero section** with split layout (content + image placeholder), dual CTAs
+- **About section** with foundation story, mission text, and Genesis 12:2-3 quote card (dark card with decorative quotation mark)
+- **Focus Areas** — all 6 from the PDF: Child Welfare, Social Welfare, Youth Mentorship, Education Support, Faith-Driven Impact, Skills Development. Each with emoji, description, and colour accent bar
+- **Founders section** — Neo Kobe, Mahlatse Mokoena, Khutso Mtsweni with avatar placeholders
+- **Current Drive section** — "Planting Seeds of Hope" School Donation Drive with donation items as pill tags, contact numbers, and poster placeholder
+- **Documentary section** — embedded YouTube video (Genesis: Building a Sanctuary) on dark background
+- **Get Involved section** — 6 ways to participate: Donate, Offer Skills, Partner, Community Service, Mentor/Speak, Sponsor a Project
+- **Impact quote section** — dark background with CTA
+- **Footer** — contact info (email + 3 phone numbers), Instagram (@bless.edtobless), mission tagline
+- Fully responsive: 3-column → 2-column → single-column across breakpoints
+- Mobile nav hides links, keeps logo + CTA
+- Updated page metadata and SEO description
+
+### Changed
+- Replaced design system preview with production site
+- Layout updated with full site metadata
+
+### Design Decisions
+- Single-page scroll chosen over multi-page (content volume doesn't justify separate pages, reduces maintenance)
+- Contact via mailto: link — zero third-party dependencies
+- Documentary embedded directly via YouTube (no hosting needed)
+- Orange (#E25C29) used as primary accent throughout (yellow washes out on white)
+- Dark sections (quote card, documentary, impact quote, footer) create rhythm and contrast
+- Photo/image placeholders use dashed borders — TK will drop in real images manually
+
+---
+
+## [0.2.1] — 2026-03-10
+
+### Fixed
+- Added missing `typescript` dev dependency causing Vercel build failure
 
 ---
 
@@ -13,18 +48,13 @@ Format follows [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`
 
 ### Changed
 - Switched from dark theme to white background (per Neo's feedback)
-- Primary accent shifted from yellow (#F4E167) to orange (#E25C29) for headings, highlights, tags, and quote borders — yellow washed out on white
-- Cards and type blocks now sit on light grey (#F5F5F5) instead of dark (#1A1A1A)
-- Navigation restyled for light theme with subtle border and shadow
-- All body/secondary text colours updated from white-on-dark to dark-on-white
-- Button secondary and ghost variants updated for light background contrast
-- Footer remains dark (#111111) as a visual anchor
-- Selection colour updated to orange tint
+- Primary accent shifted from yellow to orange for white background contrast
+- Cards on light grey (#F5F5F5), footer remains dark as visual anchor
+- Updated all text colours from white-on-dark to dark-on-white
 
 ### Fixed
-- TypeScript build error (missing `typescript` dev dependency)
-- Vercel 404 deployment issue (framework preset was set to "Other" instead of "Next.js")
-- Double-nested zip folder structure causing empty repo push
+- Vercel 404 (framework preset was "Other" instead of "Next.js")
+- Double-nested zip folder structure
 
 ---
 
@@ -32,36 +62,18 @@ Format follows [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`
 
 ### Added
 - Initial Next.js 16 project (App Router, TypeScript)
-- Design system preview page with 9 sections:
-  01. Colour Palette (#F4E167, #E25C29, #EDAB8A, #111111, #FFFFFF) + gradient applications
-  02. Typography — Nunito (headings, 700-900) + DM Sans (body, 400-700)
-  03. Buttons & Actions — primary (yellow), orange, secondary (outline), ghost
-  04. Navigation bar preview
-  05. Focus Area Cards — Child Welfare, Education Support, Youth Development
-  06. Founders Section — Neo Kobe, Mahlatse Mokoena, Khutso Mtsweni
-  07. Mission Quote block
-  08. Get Involved cards — Donate, Partner, Mentor, Offer Skills
-  09. Footer preview
-- Google Fonts loaded via CDN link tags
-- CSS Modules for component styling
-- Responsive layout (mobile breakpoint at 768px)
-- Fade-up entry animations on hero section
+- Design system preview with 9 sections
+- Nunito (headings) + DM Sans (body) font pairing
 - Deployed to Vercel at blessedtobless.vercel.app
 - GitHub repo at github.com/ignTlangi/blessedtobless
-
-### Design Decisions
-- **Font**: Nunito chosen over Syne (too techy) and Playfair Display / Lora (considered but Nunito's rounded, friendly feel best matched the youth-focused, community-driven mission)
-- **Theme**: Started dark, switched to white per client feedback
-- **Stack**: Next.js on Vercel free tier — Neo covers domain only
 
 ---
 
 ## Upcoming
 
-### [0.3.0] — Target: week of 2026-03-03
-- Content collection from Neo (photos, documentary link, logo SVG)
-- Timeline and content checklist finalised
-
-### [1.0.0] — Target: 2026-03-07
-- Full site launch with real content, images, and contact form
+### [1.0.0] — Target: TBD
+- Real photos from Neo (hero, founders headshots, outreach gallery)
+- Logo SVG/PNG integration
+- Campaign poster image for current drive
 - Domain (blessedtobless.africa pending) connected
+- Final copy review with Neo

@@ -3,261 +3,370 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* Hero */}
-      <section className={styles.hero}>
+      {/* ===== STICKY NAV ===== */}
+      <nav className={styles.nav}>
+        <div className={styles.navInner}>
+          <a href="#hero" className={styles.navLogo}>
+            Blessed To <span className={styles.accent}>Bless</span>
+          </a>
+          <ul className={styles.navLinks}>
+            <li><a href="#about">About</a></li>
+            <li><a href="#focus">What We Do</a></li>
+            <li><a href="#founders">Founders</a></li>
+            <li><a href="#involved">Get Involved</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a href="#involved" className={styles.navCta}>Get Involved</a>
+        </div>
+      </nav>
+
+      {/* ===== HERO ===== */}
+      <section id="hero" className={styles.hero}>
         <div className={styles.heroGlow1} />
         <div className={styles.heroGlow2} />
-        <span className={`${styles.badge} animate-fade-up delay-1`}>
-          Blessed To Bless Foundation &middot; Design Preview
-        </span>
-        <h1 className={`${styles.heroTitle} animate-fade-up delay-3`}>
-          Blessed To<br />
-          <span className={styles.highlight}>Bless</span>
-        </h1>
-        <p className={`${styles.heroSub} animate-fade-up delay-5`}>
-          Empowering Lives &middot; Inspiring Hope &middot; Creating Change
-        </p>
-        <p className={`${styles.heroNote} animate-fade-up delay-7`}>
-          This is a design system preview for the upcoming Blessed To Bless website.
-          <br />Review the colours, typography, and component styles below.
-        </p>
-      </section>
-
-      <div className={styles.gradientBar} />
-
-      {/* Colour Palette */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>01 — Colour Palette</h2>
-        <div className={styles.colorGrid}>
-          {[
-            { name: 'Primary Yellow', hex: '#F4E167', bg: '#F4E167' },
-            { name: 'Accent Orange', hex: '#E25C29', bg: '#E25C29' },
-            { name: 'Accent Peach', hex: '#EDAB8A', bg: '#EDAB8A' },
-            { name: 'Dark Background', hex: '#111111', bg: '#111111' },
-            { name: 'White', hex: '#FFFFFF', bg: '#FFFFFF', border: true },
-          ].map((c) => (
-            <div className={styles.colorCard} key={c.hex}>
-              <div
-                className={styles.colorSwatch}
-                style={{
-                  background: c.bg,
-                  border: c.border ? '1px solid rgba(0,0,0,0.1)' : 'none',
-                }}
-              />
-              <div className={styles.colorInfo}>
-                <div className={styles.colorName}>
-                  {c.name}
-                </div>
-                <div className={styles.colorHex}>{c.hex}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.gradientLabel}>Gradient Applications</div>
-        <div className={styles.gradientRow}>
-          <div className={styles.gradientSwatch} style={{ background: 'linear-gradient(135deg, #F4E167, #E25C29)' }} />
-          <div className={styles.gradientSwatch} style={{ background: 'linear-gradient(135deg, #E25C29, #EDAB8A)' }} />
-          <div className={styles.gradientSwatch} style={{ background: 'linear-gradient(135deg, #F4E167, #EDAB8A)' }} />
-        </div>
-      </section>
-
-      <div className={styles.gradientBar} />
-
-      {/* Typography */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>02 — Typography</h2>
-        <div className={styles.typeStack}>
-          {/* Heading font */}
-          <div className={styles.typeBlock}>
-            <span className={styles.typeBlockLabel}>Nunito · ExtraBold 800</span>
-            <div className={styles.fontTag}>Heading Font — Nunito</div>
-            <h3 className={styles.typeDisplay}>Be the Change.</h3>
-            <p className={styles.typeCaption}>Display / Hero — Nunito 800–900, responsive clamp</p>
-          </div>
-
-          <div className={styles.typeBlock}>
-            <span className={styles.typeBlockLabel}>Nunito · Bold 700</span>
-            <div className={styles.fontTag}>Heading Font — Nunito</div>
-            <h4 className={styles.typeSub}>Empowering Lives, Inspiring Hope</h4>
-            <h5 className={styles.typeSmall}>Child Welfare &amp; Community Support</h5>
-            <p className={styles.typeCaption}>Section Heading / Card Title — Nunito 700–800</p>
-          </div>
-
-          <div className={styles.typeBlock}>
-            <span className={styles.typeBlockLabel}>DM Sans · Regular 400</span>
-            <div className={styles.fontTag}>Body Font — DM Sans</div>
-            <p className={styles.typeBodyLg}>
-              Bless2Bless Foundation is a nonprofit organization driven by a simple yet powerful
-              vision: to empower lives, inspire hope, and create lasting change.
-            </p>
-            <p className={styles.typeBody}>
-              Our mission is rooted in the principle of being blessed to be a blessing — the belief
-              that everything entrusted to us is meant to impact others. Whether it is skills,
-              knowledge, resources, or influence, every blessing carries a responsibility to serve.
-            </p>
-            <p className={styles.typeCaption}>Body Large 18px / Body Regular 15px — DM Sans 400</p>
-          </div>
-        </div>
-      </section>
-
-      <div className={styles.gradientBar} />
-
-      {/* Buttons */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>03 — Buttons &amp; Actions</h2>
-        <div className={styles.buttonRow}>
-          <button className={`${styles.btn} ${styles.btnPrimary}`}>Get Involved</button>
-          <button className={`${styles.btn} ${styles.btnOrange}`}>Donate Now</button>
-          <button className={`${styles.btn} ${styles.btnSecondary}`}>Learn More</button>
-          <button className={`${styles.btn} ${styles.btnGhost}`}>Contact Us</button>
-        </div>
-      </section>
-
-      <div className={styles.gradientBar} />
-
-      {/* Navigation Preview */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>04 — Navigation</h2>
-        <nav className={styles.navPreview}>
-          <div className={styles.navLogo}>
-            Blessed To <span className={styles.yellow}>Bless</span>
-          </div>
-          <ul className={styles.navLinks}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">What We Do</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <a href="#" className={styles.navCta}>Get Involved</a>
-        </nav>
-      </section>
-
-      <div className={styles.gradientBar} />
-
-      {/* Focus Area Cards */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>05 — Focus Area Cards</h2>
-        <div className={styles.cardGrid}>
-          {[
-            {
-              tag: 'Child Welfare',
-              tagColor: 'var(--yellow)',
-              title: 'Building Safe Spaces',
-              text: 'Supporting vulnerable children through donations, outreach programs, mentorship, emotional support, and essential care initiatives.',
-              gradient: 'linear-gradient(135deg, rgba(244,225,103,0.12) 0%, rgba(226,92,41,0.06) 100%)',
-            },
-            {
-              tag: 'Education Support',
-              tagColor: 'var(--orange)',
-              title: 'Access to Learning',
-              text: 'Promoting quality education through school supply drives, tutoring support, reading initiatives, and motivational engagements.',
-              gradient: 'linear-gradient(135deg, rgba(226,92,41,0.12) 0%, rgba(237,171,138,0.06) 100%)',
-            },
-            {
-              tag: 'Youth Development',
-              tagColor: 'var(--peach)',
-              title: 'Raising Leaders',
-              text: 'Purpose-driven young leaders through mentorship programs, life-skills workshops, and character-building initiatives.',
-              gradient: 'linear-gradient(135deg, rgba(237,171,138,0.12) 0%, rgba(244,225,103,0.06) 100%)',
-            },
-          ].map((card) => (
-            <div className={styles.card} key={card.title}>
-              <div className={styles.cardImage} style={{ background: card.gradient }}>
-                <span className={styles.cardImagePlaceholder}>Photo</span>
-              </div>
-              <div className={styles.cardBody}>
-                <div className={styles.cardTag} style={{ color: card.tagColor }}>
-                  {card.tag}
-                </div>
-                <h3 className={styles.cardTitle}>{card.title}</h3>
-                <p className={styles.cardText}>{card.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className={styles.gradientBar} />
-
-      {/* Founders Preview */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>06 — Founders Section</h2>
-        <div className={styles.founderGrid}>
-          {[
-            { name: 'Neo Kobe', initials: 'NK', gradient: 'linear-gradient(135deg, var(--yellow), var(--orange))' },
-            { name: 'Mahlatse Mokoena', initials: 'MM', gradient: 'linear-gradient(135deg, var(--orange), var(--peach))' },
-            { name: 'Khutso Mtsweni', initials: 'KM', gradient: 'linear-gradient(135deg, var(--peach), var(--yellow))' },
-          ].map((founder) => (
-            <div className={styles.founderCard} key={founder.name}>
-              <div className={styles.founderAvatar} style={{ background: founder.gradient }}>
-                {founder.initials}
-              </div>
-              <div className={styles.founderName}>{founder.name}</div>
-              <div className={styles.founderRole}>Co-Founder</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className={styles.gradientBar} />
-
-      {/* Quote Block */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>07 — Mission Quote</h2>
-        <div className={styles.quoteBlock}>
-          <p className={styles.quoteText}>
-            &ldquo;We believe that real change happens when ordinary people use what they have
-            to make an <em>extraordinary difference</em>.&rdquo;
+        <div className={styles.heroContent}>
+          <span className={styles.heroBadge}>Empowering Lives &middot; Inspiring Hope &middot; Creating Change</span>
+          <h1 className={styles.heroTitle}>
+            Blessed To<br />
+            <span className={styles.highlight}>Bless</span> Foundation
+          </h1>
+          <p className={styles.heroSub}>
+            Everything God has entrusted to us is meant to impact others. We exist to transform
+            communities through intentional acts of generosity, compassion, and service.
           </p>
-          <span className={styles.quoteAttr}>— Blessed To Bless Foundation</span>
+          <div className={styles.heroBtns}>
+            <a href="#involved" className={styles.btnPrimary}>Get Involved</a>
+            <a href="#documentary" className={styles.btnSecondary}>Watch Our Story &#9654;</a>
+          </div>
+        </div>
+        <div className={styles.heroImage}>
+          <img
+            src="/images/hero.jpg"
+            alt="Blessed To Bless volunteer holding a child at an outreach event"
+            className={styles.heroImg}
+          />
         </div>
       </section>
 
-      <div className={styles.gradientBar} />
-
-      {/* Get Involved Preview */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>08 — Get Involved Section</h2>
-        <div className={styles.involvedGrid}>
-          {[
-            { icon: '💛', title: 'Make a Donation', text: 'Contribute financially or through goods such as clothing, food, school supplies, and toiletries.' },
-            { icon: '🤝', title: 'Partner With Us', text: 'Businesses, churches, schools, and organizations can collaborate through sponsorships and joint initiatives.' },
-            { icon: '🎓', title: 'Mentor or Speak', text: 'Inspire the next generation by sharing your story, knowledge, and life experiences with children and youth.' },
-            { icon: '🛠', title: 'Offer Your Skills', text: 'Whether you are a teacher, healthcare worker, creative, or professional — your expertise can empower others.' },
-          ].map((item) => (
-            <div className={styles.involvedCard} key={item.title}>
-              <div className={styles.involvedIcon}>{item.icon}</div>
-              <h4 className={styles.involvedTitle}>{item.title}</h4>
-              <p className={styles.involvedText}>{item.text}</p>
+      {/* ===== ABOUT ===== */}
+      <section id="about" className={styles.about}>
+        <div className={styles.sectionContainer}>
+          <div className={styles.aboutGrid}>
+            <div className={styles.aboutLeft}>
+              <span className={styles.sectionLabel}>About Us</span>
+              <h2 className={styles.sectionHeading}>
+                Blessed to be a <span className={styles.accent}>blessing</span>
+              </h2>
+              <p className={styles.bodyText}>
+                Bless2Bless Foundation is a nonprofit organisation founded by Neo, Khutso and
+                Mahlatse in 2023, driven by a simple yet powerful vision: to empower lives,
+                inspire hope, and create lasting change.
+              </p>
+              <p className={styles.bodyText}>
+                Our mission is rooted in the belief that every blessing carries a responsibility
+                to serve. Whether it&apos;s skills, knowledge, resources, finances, or influence — we
+                believe these are meant to flow through us, not stop with us.
+              </p>
+              <p className={styles.bodyText}>
+                While we support various community upliftment initiatives, children have been at
+                the heart of our work from the very beginning. We&apos;ve adopted a children&apos;s home,
+                identifying what&apos;s needed and creating safe spaces where young lives can thrive.
+              </p>
             </div>
-          ))}
+            <div className={styles.aboutRight}>
+              <img
+                src="/images/branded-shirt.webp"
+                alt="Blessed To Bless volunteer wearing branded shirt - Empowering Lives, Inspiring Hope, Creating Change"
+                className={styles.aboutImage}
+              />
+              <div className={styles.quoteCard}>
+                <p className={styles.quoteText}>
+                  &ldquo;And I will make of you a great nation, and I will bless you and make your
+                  name great, so that you will be a blessing.&rdquo;
+                </p>
+                <span className={styles.quoteAttr}>Genesis 12:2-3 ESV</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className={styles.gradientBar} />
-
-      {/* Footer Preview */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>09 — Footer</h2>
-        <footer className={styles.footerPreview}>
-          <div className={styles.footerLeft}>
-            <div className={styles.footerLogo}>
-              Blessed To <span className={styles.yellow}>Bless</span>
-            </div>
-            <p className={styles.footerTagline}>Empowering Lives &middot; Inspiring Hope &middot; Creating Change</p>
+      {/* ===== FOCUS AREAS ===== */}
+      <section id="focus" className={styles.focus}>
+        <div className={styles.sectionContainer}>
+          <span className={styles.sectionLabel}>What We Do</span>
+          <h2 className={styles.sectionHeading}>
+            Key areas of <span className={styles.accent}>focus</span>
+          </h2>
+          <p className={styles.sectionSub}>
+            Through collective action and faith-driven purpose, we serve communities across
+            six core areas.
+          </p>
+          <div className={styles.focusGrid}>
+            {[
+              {
+                emoji: '🧒',
+                title: 'Child Welfare',
+                text: 'Supporting and uplifting vulnerable children through donations, outreach programs, mentorship, emotional support, and essential care initiatives.',
+                color: 'var(--orange)',
+                image: '/images/outreach-gathering.jpg',
+              },
+              {
+                emoji: '🤝',
+                title: 'Social Welfare & Community Support',
+                text: 'Assisting disadvantaged individuals and families through food drives, clothing donations, hygiene campaigns, and community relief efforts.',
+                color: 'var(--peach)',
+                image: '/images/food-drive.jpg',
+              },
+              {
+                emoji: '🎓',
+                title: 'Youth Mentorship & Leadership',
+                text: 'Raising purpose-driven young leaders through mentorship programs, life-skills workshops, and character-building initiatives.',
+                color: 'var(--orange)',
+                image: '/images/mentoring.webp',
+              },
+              {
+                emoji: '📚',
+                title: 'Education Support',
+                text: 'Promoting access to quality education through school supply drives, tutoring support, reading initiatives, and motivational engagements.',
+                color: 'var(--yellow)',
+                image: '/images/education.webp',
+              },
+              {
+                emoji: '💛',
+                title: 'Faith-Driven Community Impact',
+                text: 'Encouraging values of compassion, stewardship, and service through initiatives inspired by the principle of being blessed to be a blessing.',
+                color: 'var(--peach)',
+                image: '/images/community-event.webp',
+              },
+              {
+                emoji: '🛠',
+                title: 'Skills Development & Empowerment',
+                text: 'Equipping youth and community members with practical skills, career guidance, entrepreneurship exposure, and personal development tools.',
+                color: 'var(--orange)',
+                image: '/images/handprints.jpg',
+              },
+            ].map((item) => (
+              <div className={styles.focusCard} key={item.title}>
+                <div className={styles.focusImageWrap}>
+                  <img src={item.image} alt={item.title} className={styles.focusImage} />
+                </div>
+                <div className={styles.focusEmoji}>{item.emoji}</div>
+                <h3 className={styles.focusTitle}>{item.title}</h3>
+                <p className={styles.focusText}>{item.text}</p>
+                <div className={styles.focusBar} style={{ background: item.color }} />
+              </div>
+            ))}
           </div>
-          <div className={styles.footerRight}>
-            <a className={styles.footerEmail} href="mailto:blessedtoblessf@gmail.com">
-              blessedtoblessf@gmail.com
-            </a>
-            <p className={styles.footerCopy}>&copy; 2025 Blessed To Bless Foundation. All rights reserved.</p>
-          </div>
-        </footer>
+        </div>
       </section>
 
-      <div style={{ height: '60px' }} />
+      {/* ===== FOUNDERS ===== */}
+      <section id="founders" className={styles.founders}>
+        <div className={styles.sectionContainer}>
+          <span className={styles.sectionLabel}>Our Team</span>
+          <h2 className={styles.sectionHeading}>
+            Meet the <span className={styles.accent}>founders</span>
+          </h2>
+          <p className={styles.sectionSub}>
+            Three young leaders united by faith and a shared vision to make a lasting impact.
+          </p>
+          <div className={styles.founderGrid}>
+            {[
+              { name: 'Neo Kobe', initials: 'NK', role: 'Co-Founder' },
+              { name: 'Mahlatse Mokoena', initials: 'MM', role: 'Co-Founder' },
+              { name: 'Khutso Mtsweni', initials: 'KM', role: 'Co-Founder' },
+            ].map((f, i) => (
+              <div className={styles.founderCard} key={f.name}>
+                <div className={styles.founderImageWrap}>
+                  <div className={styles.founderImagePlaceholder}>
+                    {f.initials}
+                  </div>
+                </div>
+                <h3 className={styles.founderName}>{f.name}</h3>
+                <span className={styles.founderRole}>{f.role}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CURRENT DRIVE ===== */}
+      <section id="drive" className={styles.drive}>
+        <div className={styles.sectionContainer}>
+          <div className={styles.driveGrid}>
+            <div className={styles.driveContent}>
+              <span className={styles.driveLabel}>Current Campaign</span>
+              <h2 className={styles.driveTitle}>
+                Planting Seeds of <span className={styles.accent}>Hope</span>
+              </h2>
+              <h3 className={styles.driveSubtitle}>School Donation Drive</h3>
+              <p className={styles.bodyText}>
+                Winter is around the corner and you can be the reason someone out there believes
+                in a brighter future. Help us equip young learners with the tools they deserve.
+              </p>
+              <p className={styles.bodyTextStrong}>
+                A book can open a mind. A pencil can start a dream.
+              </p>
+              <div className={styles.driveItems}>
+                <h4 className={styles.driveItemsTitle}>What you can donate:</h4>
+                <div className={styles.driveTagGrid}>
+                  {['School shoes', 'Books', 'Uniforms', 'Stationery', 'Sanitary pads', 'School bags', 'Non-perishable food', 'Monetary donations'].map((item) => (
+                    <span className={styles.driveTag} key={item}>{item}</span>
+                  ))}
+                </div>
+              </div>
+              <div className={styles.driveContact}>
+                <a href="tel:+27685458507" className={styles.drivePhone}>+27 68 545 8507</a>
+                <span className={styles.driveDivider}>/</span>
+                <a href="tel:+27798755272" className={styles.drivePhone}>+27 79 875 5272</a>
+              </div>
+            </div>
+            <div className={styles.drivePoster}>
+              <div className={styles.drivePosterPlaceholder}>
+                <span>Campaign Poster</span>
+                <span className={styles.heroImageNote}>Planting Seeds of Hope poster goes here</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== DOCUMENTARY ===== */}
+      <section id="documentary" className={styles.documentary}>
+        <div className={styles.sectionContainer}>
+          <span className={styles.sectionLabelLight}>Our Journey</span>
+          <h2 className={styles.sectionHeadingLight}>
+            Genesis: Building a Sanctuary
+          </h2>
+          <p className={styles.sectionSubLight}>
+            A deeper look into our journey — the projects we&apos;ve worked on, the communities
+            we&apos;ve served, and the impact we strive to make.
+          </p>
+          <div className={styles.videoWrap}>
+            <iframe
+              className={styles.video}
+              src="https://www.youtube.com/embed/XvcvD4Cmn4U"
+              title="Blessed To Bless Documentary - Genesis: Building a Sanctuary"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== GET INVOLVED ===== */}
+      <section id="involved" className={styles.involved}>
+        <div className={styles.sectionContainer}>
+          <span className={styles.sectionLabel}>Make a Difference</span>
+          <h2 className={styles.sectionHeading}>
+            How to get <span className={styles.accent}>involved</span>
+          </h2>
+          <p className={styles.sectionSub}>
+            Real change happens when ordinary people use what they have to make an extraordinary
+            difference. Here&apos;s how you can join the mission.
+          </p>
+          <div className={styles.involvedGrid}>
+            {[
+              {
+                emoji: '💰',
+                title: 'Make a Donation',
+                text: 'Contribute financially or through goods such as clothing, food, school supplies, toiletries, and other essential items. Every contribution helps us reach more communities.',
+              },
+              {
+                emoji: '✨',
+                title: 'Offer Your Services or Skills',
+                text: 'Whether you\'re a teacher, healthcare worker, creative, business owner, counsellor, or skilled professional — your expertise can uplift and empower others.',
+              },
+              {
+                emoji: '🏢',
+                title: 'Partner With Us',
+                text: 'Businesses, churches, schools, and organisations can collaborate with us through sponsorships, joint initiatives, or resource support to expand our reach.',
+              },
+              {
+                emoji: '🫶',
+                title: 'Community Service',
+                text: 'Students and individuals needing community service hours can serve alongside us while making a meaningful difference in real lives.',
+              },
+              {
+                emoji: '🎤',
+                title: 'Mentor or Speak',
+                text: 'Inspire the next generation by sharing your story, knowledge, and life experiences with children and youth in our initiatives.',
+              },
+              {
+                emoji: '🎯',
+                title: 'Sponsor a Project',
+                text: 'Help fund a specific campaign, child welfare visit, education drive, or community upliftment project that resonates with you.',
+              },
+            ].map((item) => (
+              <div className={styles.involvedCard} key={item.title}>
+                <div className={styles.involvedEmoji}>{item.emoji}</div>
+                <h3 className={styles.involvedTitle}>{item.title}</h3>
+                <p className={styles.involvedText}>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== IMPACT QUOTE ===== */}
+      <section className={styles.impactSection}>
+        <div className={styles.sectionContainer}>
+          <div className={styles.impactQuote}>
+            <h2 className={styles.impactText}>
+              &ldquo;We believe that real change happens when ordinary people use what they have
+              to make an <em>extraordinary difference</em>.&rdquo;
+            </h2>
+            <p className={styles.impactSub}>
+              Through collective action and faith-driven purpose, we are building a culture where
+              blessings don&apos;t stop with us — they flow through us.
+            </p>
+            <a href="#involved" className={styles.btnPrimaryDark}>Be the Change</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CONTACT / FOOTER ===== */}
+      <footer id="contact" className={styles.footer}>
+        <div className={styles.sectionContainer}>
+          <div className={styles.footerGrid}>
+            <div className={styles.footerMain}>
+              <h2 className={styles.footerLogo}>
+                Blessed To <span className={styles.accentLight}>Bless</span>
+              </h2>
+              <p className={styles.footerTagline}>
+                Empowering Lives &middot; Inspiring Hope &middot; Creating Change
+              </p>
+              <p className={styles.footerMission}>
+                Your kindness can rewrite someone&apos;s story.
+              </p>
+            </div>
+            <div className={styles.footerContact}>
+              <h3 className={styles.footerHeading}>Get In Touch</h3>
+              <a href="mailto:blessedtoblessf@gmail.com" className={styles.footerLink}>
+                blessedtoblessf@gmail.com
+              </a>
+              <a href="tel:+27646875387" className={styles.footerLink}>064 687 5387</a>
+              <a href="tel:+27685458507" className={styles.footerLink}>068 545 8507</a>
+              <a href="tel:+27606609289" className={styles.footerLink}>060 660 9289</a>
+            </div>
+            <div className={styles.footerSocial}>
+              <h3 className={styles.footerHeading}>Follow Us</h3>
+              <a
+                href="https://instagram.com/bless.edtobless"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.footerLink}
+              >
+                @bless.edtobless
+              </a>
+            </div>
+          </div>
+          <div className={styles.footerBottom}>
+            <p>&copy; 2025 Blessed To Bless Foundation. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }

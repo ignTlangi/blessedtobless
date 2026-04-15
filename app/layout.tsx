@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Blessed To Bless — Design System',
-  description: 'Design system preview for the Blessed To Bless Foundation website.',
+  title: 'Blessed To Bless Foundation | Empowering Lives, Inspiring Hope, Creating Change',
+  description: 'Bless2Bless Foundation is a nonprofit organisation transforming communities through child welfare, education, mentorship, and faith-driven service. Founded in 2023.',
 }
 
 export default function RootLayout({
