@@ -1,6 +1,6 @@
 {
   "name": "b2b-design-system",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "Blessed To Bless Foundation website",
   "scripts": {
     "dev": "next dev",
