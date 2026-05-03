@@ -30,7 +30,6 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      {/* NAV */}
       <nav className={styles.nav}>
         <div className={styles.navInner}>
           <a href="#hero" className={styles.navLogo} onClick={closeMenu}>
@@ -56,7 +55,6 @@ export default function Home() {
 
       {menuOpen && <div className={styles.overlay} onClick={closeMenu} />}
 
-      {/* HERO */}
       <section id="hero" className={styles.hero}>
         <div className={styles.heroGlow1} />
         <div className={styles.heroGlow2} />
@@ -74,7 +72,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
       <section id="about" className={styles.about}>
         <div className={styles.sectionContainer}>
           <div className={styles.aboutGrid}>
@@ -96,7 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOCUS AREAS */}
       <section id="focus" className={styles.focus}>
         <div className={styles.sectionContainer}>
           <span className={styles.sectionLabel}>What We Do</span>
@@ -123,7 +119,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOUNDERS */}
       <section id="founders" className={styles.founders}>
         <div className={styles.sectionContainer}>
           <span className={styles.sectionLabel}>Our Team</span>
@@ -133,7 +128,7 @@ export default function Home() {
             {[
               { name: 'Neo Kobe', initials: 'NK', role: 'Co-Founder', image: '/images/founder-neo.jpg', linkedin: 'https://www.linkedin.com/in/neo-kobe-818010246/' },
               { name: 'Mahlatse Mokoena', initials: 'MM', role: 'Co-Founder', image: '/images/founder-mahlatse.jpg', linkedin: 'https://www.linkedin.com/in/mahlatse-mokoena-27565b295/' },
-              { name: 'Khutso Mtsweni', initials: 'KM', role: 'Co-Founder', image: '/images/founder-khutso.jpg', linkedin: '' },
+              { name: 'Khutso Mtsweni', initials: 'KM', role: 'Co-Founder', image: '/images/founder-khutso.jpg', linkedin: 'https://www.linkedin.com/in/khutso-mtsweni-418b15345/' },
             ].map((f) => (
               <div className={styles.founderCard} key={f.name}>
                 <div className={styles.founderImageWrap}>
@@ -143,9 +138,7 @@ export default function Home() {
                 <h3 className={styles.founderName}>{f.name}</h3>
                 <span className={styles.founderRole}>{f.role}</span>
                 {f.linkedin && (
-                  <a href={f.linkedin} target="_blank" rel="noopener noreferrer" className={styles.founderLinkedin}>
-                    <LinkedInIcon /> LinkedIn
-                  </a>
+                  <a href={f.linkedin} target="_blank" rel="noopener noreferrer" className={styles.founderLinkedin}><LinkedInIcon /> LinkedIn</a>
                 )}
               </div>
             ))}
@@ -153,40 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CURRENT DRIVE */}
-      <section id="drive" className={styles.drive}>
-        <div className={styles.sectionContainer}>
-          <div className={styles.driveGrid}>
-            <div className={styles.driveContent}>
-              <span className={styles.driveLabel}>Current Campaign</span>
-              <h2 className={styles.driveTitle}>Planting Seeds of <span className={styles.accent}>Hope</span></h2>
-              <h3 className={styles.driveSubtitle}>School Donation Drive</h3>
-              <p className={styles.bodyText}>Winter is around the corner and you can be the reason someone out there believes in a brighter future. Help us equip young learners with the tools they deserve.</p>
-              <p className={styles.bodyTextStrong}>A book can open a mind. A pencil can start a dream.</p>
-              <div className={styles.driveItems}>
-                <h4 className={styles.driveItemsTitle}>What you can donate:</h4>
-                <div className={styles.driveTagGrid}>
-                  {['School shoes', 'Books', 'Uniforms', 'Stationery', 'Sanitary pads', 'School bags', 'Non-perishable food', 'Monetary donations'].map((item) => (
-                    <span className={styles.driveTag} key={item}>{item}</span>
-                  ))}
-                </div>
-              </div>
-              <div className={styles.driveContact}>
-                <a href="https://wa.me/27685458507" target="_blank" rel="noopener noreferrer" className={styles.drivePhone}><WhatsAppIcon /> +27 68 545 8507</a>
-                <a href="https://wa.me/27798755272" target="_blank" rel="noopener noreferrer" className={styles.drivePhone}><WhatsAppIcon /> +27 79 875 5272</a>
-              </div>
-            </div>
-            <div className={styles.drivePoster}>
-              <div className={styles.drivePosterPlaceholder}>
-                <span>Campaign Poster</span>
-                <span className={styles.posterNote}>Awaiting poster from Neo</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DOCUMENTARY */}
       <section id="documentary" className={styles.documentary}>
         <div className={styles.sectionContainer}>
           <span className={styles.sectionLabelLight}>Our Journey</span>
@@ -198,7 +157,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GET INVOLVED */}
       <section id="involved" className={styles.involved}>
         <div className={styles.sectionContainer}>
           <span className={styles.sectionLabel}>Make a Difference</span>
@@ -231,18 +189,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* IMPACT QUOTE */}
       <section className={styles.impactSection}>
         <div className={styles.sectionContainer}>
           <div className={styles.impactQuote}>
             <h2 className={styles.impactText}>&ldquo;We believe that real change happens when ordinary people use what they have to make an <em>extraordinary difference</em>.&rdquo;</h2>
             <p className={styles.impactSub}>Through collective action and faith-driven purpose, we are building a culture where blessings don&apos;t stop with us — they flow through us.</p>
             <a href="#involved" className={styles.btnPrimaryDark}>Be the Change</a>
+            <p className={styles.impactEmail}>
+              <a href="mailto:blessedtoblessf@gmail.com" className={styles.impactEmailLink}>
+                <EmailIcon /> blessedtoblessf@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer id="contact" className={styles.footer}>
         <div className={styles.sectionContainer}>
           <div className={styles.footerGrid}>
@@ -270,7 +231,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* BACK TO TOP */}
       <button className={`${styles.backToTop} ${showTop ? styles.backToTopVisible : ''}`} onClick={scrollToTop} aria-label="Back to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
       </button>

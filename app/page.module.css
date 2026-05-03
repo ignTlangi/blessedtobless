@@ -16,8 +16,6 @@
 .navCtaMobile { font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 12px 28px; border-radius: 50px; background: var(--orange); color: var(--white) !important; display: inline-block; text-align: center; }
 .navCta { font-family: var(--font-body); font-weight: 600; font-size: 13px; padding: 10px 24px; border-radius: 50px; background: var(--orange); color: var(--white); transition: all 0.3s ease; }
 .navCta:hover { background: #cc5124; box-shadow: 0 4px 16px rgba(226,92,41,0.2); }
-
-/* Hamburger */
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; z-index: 110; }
 .hamburgerLine { display: block; width: 24px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all 0.3s ease; }
 .hamburgerOpen1 { transform: rotate(45deg) translate(5px, 5px); }
@@ -34,7 +32,7 @@
 .heroTitle { font-family: var(--font-heading); font-weight: 900; font-size: clamp(42px,5vw,68px); line-height: 1.02; letter-spacing: -1.5px; margin-bottom: 24px; color: var(--text-primary); }
 .highlight { color: var(--orange); position: relative; display: inline-block; }
 .highlight::after { content: ''; position: absolute; bottom: 4px; left: 0; width: 100%; height: 5px; background: var(--orange); opacity: 0.15; border-radius: 3px; }
-.heroSub { font-family: var(--font-body); font-size: 17px; font-weight: 400; color: var(--text-secondary); max-width: 480px; line-height: 1.75; margin-bottom: 36px; }
+.heroSub { font-family: var(--font-body); font-size: 17px; color: var(--text-secondary); max-width: 480px; line-height: 1.75; margin-bottom: 36px; }
 .heroBtns { display: flex; gap: 14px; flex-wrap: wrap; }
 .heroImage { position: relative; z-index: 1; }
 .heroImg { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 20px; }
@@ -44,7 +42,7 @@
 .btnPrimary:hover { background: #cc5124; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(226,92,41,0.2); }
 .btnYellow { font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 14px 32px; border-radius: 50px; background: var(--yellow); color: var(--black); transition: all 0.3s ease; display: inline-block; }
 .btnYellow:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,225,103,0.3); }
-.btnPrimaryDark { font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 14px 32px; border-radius: 50px; background: var(--yellow); color: var(--black); transition: all 0.3s ease; display: inline-block; }
+.btnPrimaryDark { font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 14px 32px; border-radius: 50px; background: var(--yellow); color: var(--black); transition: all 0.3s ease; display: inline-block; margin-bottom: 24px; }
 .btnPrimaryDark:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,225,103,0.3); }
 
 /* ===== SHARED ===== */
@@ -56,7 +54,6 @@
 .sectionSub { font-family: var(--font-body); font-size: 17px; color: var(--text-secondary); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
 .sectionSubLight { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
 .bodyText { font-family: var(--font-body); font-size: 16px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px; }
-.bodyTextStrong { font-family: var(--font-heading); font-size: 18px; font-weight: 700; line-height: 1.6; color: var(--text-primary); margin-bottom: 24px; font-style: italic; }
 
 /* ===== ABOUT ===== */
 .about { padding: 100px 0; background: var(--offwhite); }
@@ -95,22 +92,6 @@
 .founderLinkedin { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--orange); display: inline-flex; align-items: center; gap: 6px; transition: opacity 0.2s ease; }
 .founderLinkedin:hover { opacity: 0.7; }
 
-/* ===== DRIVE ===== */
-.drive { padding: 100px 0; }
-.driveGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.driveLabel { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--white); background: var(--orange); padding: 6px 14px; border-radius: 50px; display: inline-block; margin-bottom: 20px; }
-.driveTitle { font-family: var(--font-heading); font-weight: 900; font-size: clamp(28px,3.5vw,42px); line-height: 1.1; margin-bottom: 8px; color: var(--text-primary); }
-.driveSubtitle { font-family: var(--font-heading); font-weight: 700; font-size: 20px; color: var(--orange); margin-bottom: 20px; }
-.driveItems { margin-top: 24px; margin-bottom: 28px; }
-.driveItemsTitle { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; }
-.driveTagGrid { display: flex; flex-wrap: wrap; gap: 8px; }
-.driveTag { font-family: var(--font-body); font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 50px; background: var(--card-bg); color: var(--text-primary); border: 1px solid var(--border); }
-.driveContact { display: flex; flex-direction: column; gap: 10px; }
-.drivePhone { font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--orange); display: flex; align-items: center; gap: 8px; }
-.drivePoster { position: relative; }
-.drivePosterPlaceholder { width: 100%; aspect-ratio: 3/4; background: var(--card-bg); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-heading); font-weight: 700; font-size: 16px; color: rgba(0,0,0,0.15); border: 2px dashed rgba(0,0,0,0.08); }
-.posterNote { font-family: var(--font-body); font-size: 12px; font-weight: 400; color: rgba(0,0,0,0.2); }
-
 /* ===== DOCUMENTARY ===== */
 .documentary { padding: 100px 0; background: var(--dark); }
 .videoWrap { position: relative; width: 100%; max-width: 900px; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
@@ -125,7 +106,7 @@
 .involvedTitle { font-family: var(--font-heading); font-weight: 800; font-size: 18px; margin-bottom: 8px; color: var(--text-primary); }
 .involvedText { font-family: var(--font-body); font-size: 14px; line-height: 1.7; color: var(--grey-text); }
 
-/* ===== OUTREACH BAR ===== */
+/* ===== OUTREACH ===== */
 .outreachBar { margin-top: 48px; padding: 36px 40px; background: var(--white); border-radius: 16px; border: 2px solid var(--orange); text-align: center; }
 .outreachTitle { font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: var(--text-primary); margin-bottom: 20px; }
 .outreachLinks { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
@@ -138,6 +119,9 @@
 .impactText { font-family: var(--font-heading); font-weight: 800; font-size: clamp(24px,3vw,36px); line-height: 1.4; color: var(--white); margin-bottom: 20px; }
 .impactText em { color: var(--yellow); font-style: normal; }
 .impactSub { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.5); margin-bottom: 36px; }
+.impactEmail { margin-top: 8px; }
+.impactEmailLink { font-family: var(--font-body); font-size: 15px; color: rgba(255,255,255,0.5); display: inline-flex; align-items: center; gap: 8px; transition: color 0.2s ease; }
+.impactEmailLink:hover { color: var(--yellow); }
 
 /* ===== FOOTER ===== */
 .footer { padding: 80px 0 40px; background: var(--black); color: var(--white); }
@@ -157,22 +141,19 @@
 .backToTop { position: fixed; bottom: 32px; right: 32px; width: 44px; height: 44px; border-radius: 50%; background: var(--orange); color: var(--white); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(226,92,41,0.3); opacity: 0; transform: translateY(20px); transition: all 0.3s ease; z-index: 90; pointer-events: none; }
 .backToTop svg { width: 20px; height: 20px; }
 .backToTopVisible { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.backToTop:hover { background: #cc5124; transform: translateY(-2px); }
+.backToTop:hover { background: #cc5124; }
 .backToTopVisible:hover { transform: translateY(-2px); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 100px; }
-  .heroImage { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 100px; gap: 40px; }
+  .heroImage { max-width: 500px; }
   .aboutGrid { grid-template-columns: 1fr; }
   .aboutRight { position: static; }
   .focusGrid { grid-template-columns: repeat(2,1fr); }
-  .driveGrid { grid-template-columns: 1fr; }
-  .drivePoster { max-width: 400px; }
 }
 
 @media (max-width: 768px) {
-  /* Mobile nav */
   .navInner { padding: 12px 20px; }
   .navCta { display: none; }
   .hamburger { display: flex; }
@@ -182,10 +163,11 @@
   .navLinks li a { font-size: 16px; color: var(--text-primary); }
   .navLinksCta { display: block; border-bottom: none !important; padding-top: 24px !important; }
 
-  /* Sections */
   .sectionContainer { padding: 0 20px; }
   .hero { padding: 100px 20px 60px; }
-  .about, .focus, .founders, .drive, .involved, .documentary, .impactSection { padding: 60px 0; }
+  .heroImage { max-width: 100%; }
+  .heroImg { border-radius: 16px; }
+  .about, .focus, .founders, .involved, .documentary, .impactSection { padding: 60px 0; }
   .focusGrid { grid-template-columns: 1fr; }
   .founderGrid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
   .involvedGrid { grid-template-columns: 1fr; }
